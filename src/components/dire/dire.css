@@ -1,0 +1,86 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* umumiy konteyner, chap menyu va o'ng kontentni joylashtirish */
+.dire-container {
+  display: flex; /* Chap menyu va o'ng kontentni yonma-yon qilish */
+  min-height: 100vh; /* Ekran bo'ylab to'liq joylashish */
+}
+
+/* Chap tomon menyu uchun styling */
+.dire-sidebar {
+  width: 220px; /* Chap menyu kengligi */
+  background-color: #f8f9fa; /* Yengil kulrang fon */
+  padding: 20px;
+  position: fixed; /* Menyu ekranda doim ko'rinadi */
+  height: 100vh; /* Ekran bo'ylab to'liq balandlik */
+  border-right: 1px solid #ddd; /* Chap menyu va kontentni ajratish uchun chegara */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Chap menyuga yengil soyali effekt */
+}
+
+/* Chap menyu ro'yxati uchun */
+.dire-sidebar ul {
+  list-style-type: none; /* Ro'yxat belgilari olib tashlanadi */
+  padding: 0;
+}
+
+.dire-sidebar li {
+  margin-bottom: 15px; /* Har bir bo'lim orasida bo'sh joy */
+}
+
+/* Buttonlar uchun styling */
+.dire-sidebar button {
+  background: none; /* Tugmada fon bo'lmasin */
+  border: none; /* Tugma chegarasini olib tashlash */
+  text-align: left; /* Matnni chapga joylashtirish */
+  font-size: 18px; /* Matn o'lchami */
+  color: #333; /* Matn rangi */
+  width: 100%; /* Tugma butun kenglikni egallaydi */
+  cursor: pointer; /* Cursorni ko'rsatgich qilib qo'yish */
+  padding: 10px;
+  border-radius: 5px; /* Burchaklarni yumshatish */
+  transition: background-color 0.3s; /* Hover effekti uchun animatsiya */
+}
+
+.dire-sidebar button:hover {
+  background-color: #007bff; /* Hover effekti */
+  color: white; /* Matn rangi oq bo'ladi */
+}
+
+/* Aktif bo'lgan tugma uchun stil */
+.dire-sidebar button.active {
+  background-color: #007bff; /* Aktif tugma uchun fon rangi */
+  color: white; /* Aktif tugma uchun oq matn */
+}
+
+/* Asosiy kontent qismi */
+.dire-main-content {
+  flex: 1; /* O'ng qism qolgan joyni egallaydi */
+  margin-left: 220px; /* Chap menyudan bo'sh joy qoldiradi */
+  padding: 20px;
+  background-color: #e9ecef; /* O'ng kontent uchun fon rangi */
+  height: 100vh; /* O'ng qismning balandligini ekran bo'ylab to'ldiradi */
+  overflow-y: auto; /* Agar kontent balandligi oshsa, scroll qo'shadi */
+}
+
+/* Bo'limlar uchun umumiy styling */
+.dire-main-content > div {
+  background-color: white; /* Bo'limning fon rangi */
+  padding: 20px;
+  border-radius: 8px; /* Burchaklar yumshatiladi */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bo'limga yengil soyali effekt */
+}
+
+.dire-main-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.dire-main-content p {
+  font-size: 16px;
+  color: #666;
+}
